@@ -1,0 +1,11 @@
+void DivdeTimeCycleSample(Node[] node,int num){
+   while(true){
+     int count = num;  
+    while(num > 0){
+      sleep(60000);    //轮询周期10s
+      int n = random(num--);//随机数
+      requestSense(node[n]);//节点n采样
+      MoveToTail(node[n]);//移动节点n到末尾
+    }
+   }
+}
